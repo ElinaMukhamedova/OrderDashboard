@@ -71,7 +71,9 @@ def main():
                 print(f"[{i}/{len(orders)}] ✓ Order #{order_id} created — {name}")
                 success += 1
             else:
-                print(f"[{i}/{len(orders)}] ✗ Failed for {name}: {result.get('errorMsg', result)}")
+                print(f"[{i}/{len(orders)}] ✗ Failed for {name}:")
+                print(f"    Status: {resp.status_code}")
+                print(f"    Response: {json.dumps(result, ensure_ascii=False, indent=2)}")
                 errors += 1
         except Exception as e:
             print(f"[{i}/{len(orders)}] ✗ Exception for {name}: {e}")
