@@ -3,4 +3,5 @@
 venv/
 __pycache__/
 *.pyc
+notified_orders.json
 .DS_Store
