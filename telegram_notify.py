@@ -100,8 +100,7 @@ def main():
             f"🔔 <b>Large order #{o['id']}</b>\n"
             f"👤 {name}\n"
             f"📍 {city}\n"
-            f"💰 {total:,.0f} KZT\n"
-            f"📦 Status: {o.get('status', '—')}"
+            f"💰 {total:,.0f} KZT"
         )
 
         result = send_telegram(text)
